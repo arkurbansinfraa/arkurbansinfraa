@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A R K URBANS INFRAA | Home</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+  <!---------- NAVBAR ---------->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="ARK Logo">
+      <span>A R K URBANS INFRAA</span>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Our Projects <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="ongoing.html">Ongoing Projects</a>
+          <a href="completed.html">Completed Projects</a>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!---------- HERO ---------->  
+  <div class="hero">
+    <h1 class="animate-title">
+      <span class="typing-text"></span>
+    </h1>
+    <p class="tagline">Building the Future, Beautifully.</p>
+  </div>
+
+  <!-- ---------------- ABOUT PREMIUM SECTION ---------------- -->
+  <section class="about-wrapper">
+
+    <div class="about-card">
+      <div class="about-text">
+        <h3 class="about-subtitle">Two Decades of Happy Homes</h3>
+        <h2 class="about-title">About ARK Urbans Infraa</h2>
+        <p>
+          ARK Urbans Infraa is a trusted real estate development company, recognized by our customers
+          for delivering high-quality residential and commercial spaces.
+        </p>
+        
+        <p>
+          Since 2003, we have successfully completed 35+ projects across Hyderabad and Bangalore,
+          developing over 500k sq. ft. of standalone properties and creating 500+ satisfied homeowners.
+        </p>
+
+        <p>
+          With two decades of experience in real estate development, our focus has always been on
+          quality, trust, and timely delivery. ARK Urbans Infraa was founded to provide modern,
+          turnkey solutions that make home-building simpler, stress-free, and truly customer-friendly.
+        </p>
+
+        <a href="about.html" class="about-btn">Know More →</a>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="about-img">
+        <img src="1.jpeg" alt="ARK Urbans Infraa About Image">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="about-wrapper">
+    <div class="about-card">
+
+      <div class="about-img">
+        <img src="living room.png" alt="Living Room Interiors">
+      </div>
+
+      <div class="about-text">
+        <h3 class="about-subtitle">End-to-End Homes for Modern Families</h3>
+        <h2 class="about-title">⭐ What We Do</h2>
+
+        <p><strong>Turnkey Solutions</strong><br>From land approvals to fully furnished delivery.</p>
+        <p><strong>Construction & Development</strong><br>Quality-driven residential and commercial projects.</p>
+        <p><strong>Design & Interiors</strong><br>Modern, functional interiors delivered by in-house teams.</p>
+        <p><strong>Project Management</strong><br>End-to-end execution with clear timelines and transparency.</p>
+
+        <a href="about.html" class="about-btn">Know More →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!---------- FOOTER ---------->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ongoing.html">our Project</a></li>
+            <li><a href="completed.html">Who We Are?</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p>📍 Block-O 606 Aparna Serenity, Kompally, Hyderabad - 500064 T.S.</p>
+          <p>🌐 <a href="http://www.arkurbansinfraa.com">www.arkurbansinfraa.com</a></p>
+        </div>
+
+        <div class="footer-col">
+          <p>📞 <a href="tel:+917022830867" class="contact-link">+91 7022830867</a></p>
+          <p>✉️ <a href="mailto:arkurbansinfraa@gmail.com">arkurbansinfraa@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="privacy-bar-wrapper">
+        <div class="privacy-bar">
+          <div class="left-links">
+            <a href="privacy.html">PRIVACY POLICY</a>
+            <a href="terms.html">TERMS & CONDITION</a>
+          </div>
+          <div class="right-text">
+            &copy; 2025 A R K URBANS INFRAA | ALL RIGHTS RESERVED
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Typing text
+    document.querySelector(".typing-text").textContent = "Welcome to A R K Urbans Infraa";
+
+    // Hamburger toggle
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("mobile-nav-active");
+      hamburger.classList.toggle("active");
+    });
+
+    // Mobile dropdown toggle
+    document.querySelectorAll("nav ul .dropdown > a").forEach(drop => {
+      drop.addEventListener("click", (e) => {
+        if (window.innerWidth < 820) {
+          e.preventDefault();
+          drop.parentElement.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

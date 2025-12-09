@@ -1,0 +1,435 @@
+/* ===================================================================== */
+/* ------------------------- GLOBAL STYLING ----------------------------- */
+/* ===================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+html, body {
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===================================================================== */
+/* ----------------------------- NAVBAR -------------------------------- */
+/* ===================================================================== */
+
+nav {
+  background-color: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 45px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 75px;
+  width: auto;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #0b2338;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.2);
+  z-index: 2000;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  display: block;
+  color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger (Mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Mobile Menu */
+.nav-links.mobile-active {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background: #0b2338;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block !important;
+}
+
+/* Responsive */
+@media(max-width: 820px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .logo img {
+    height: 60px;
+  }
+}
+
+/* ===================================================================== */
+/* ------------------------------ BANNER -------------------------------- */
+/* ===================================================================== */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.banner .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 12s infinite;
+  pointer-events: none;
+}
+
+.banner .slide:nth-child(1) { background-image: url("sample1.png"); animation-delay: 0s; }
+.banner .slide:nth-child(2) { background-image: url("sample.png");  animation-delay: 3s; }
+.banner .slide:nth-child(3) { background-image: url("sample1.png"); animation-delay: 6s; }
+.banner .slide:nth-child(4) { background-image: url("sample.png");  animation-delay: 9s; }
+
+@keyframes fade {
+  0%, 15% { opacity: 1; }
+  20%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.banner h1 {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===================================================================== */
+/* ----------------------------- STAT BOXES ----------------------------- */
+/* ===================================================================== */
+
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -60px;
+  z-index: 20;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: rgba(1,16,20,0.39);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(235,231,231,0.2);
+  border-radius: 18px;
+  padding: 15px 30px;
+  text-align: center;
+  width: 226px;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f0eeee;
+}
+
+.stat-box p {
+  font-size: 14px;
+  color: #e7e4e4fc;
+}
+
+/* ===================================================================== */
+/* ------------------------------- ABOUT -------------------------------- */
+/* ===================================================================== */
+
+.about-section {
+  padding: 0% 6%;
+  background: #f4f6f8;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-left h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0b2338;
+}
+
+.about-tagline {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 16px;
+  color: #222;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ===================================================================== */
+/* ------------------------------ HISTORY ------------------------------- */
+/* ===================================================================== */
+
+.history-section {
+  margin-top: 70px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.history-left {
+  flex: 1;
+  min-width: 260px;
+}
+
+.history-left h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b2338;
+  margin-bottom: 15px;
+}
+
+.history-left p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #222;
+  text-align: justify;
+}
+
+.history-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.history-right img {
+  width: 420px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 4px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* ===================================================================== */
+/* -------------------------- VISION / MISSION -------------------------- */
+/* ===================================================================== */
+
+.vm-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 70px 0;
+  flex-wrap: wrap;
+}
+
+.vm-box {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 32px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+}
+
+.vm-box h3 {
+  font-size: 22px;
+  color: #0b2338;
+  margin-bottom: 12px;
+}
+
+.vm-box p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ===================================================================== */
+/* ------------------------------- FOOTER ------------------------------- */
+/* ===================================================================== */
+
+/* ================== FOOTER ================== */
+footer {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 60px 60px 30px;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col a {
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #60a5fa;
+}
+
+.footer-col p {
+  margin-bottom: 8px;
+}
+
+.privacy-bar-wrapper {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #374151;
+}
+
+.privacy-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.privacy-bar a {
+  color: #9ca3af;
+}
+
+/* ===================================================================== */
+/* ------------------------- RESPONSIVE CSS ----------------------------- */
+/* ===================================================================== */
+
+@media (max-width: 1440px) {
+  nav { padding: 20px 40px; }
+  .about-left h2 { font-size: 36px; }
+  .history-right img { width: 380px; }
+}
+
+@media (max-width: 1024px) {
+  .about-container,
+  .history-section,
+  .vm-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .history-right img { width: 340px; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 18px 30px; }
+
+  .banner h1 { font-size: 38px; }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo img { height: 65px; }
+  .banner h1 { font-size: 32px; }
+  .about-left h2 { font-size: 26px; }
+  .stat-box { width: 48%; }
+  .history-right img { width: 260px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 320px) {
+  nav { padding: 14px 20px; }
+  .logo img { height: 55px; }
+  .banner h1 { font-size: 28px; }
+  .about-left h2 { font-size: 24px; }
+  .stat-box { width: 100%; }
+  .history-right img { width: 230px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}

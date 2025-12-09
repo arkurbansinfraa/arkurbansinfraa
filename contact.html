@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact | A R K URBANS INFRAA</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link rel="stylesheet" href="contact.css" />
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="ARK">
+    <span>A R K URBANS INFRAA</span>
+  </div>
+
+  <ul id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+
+    <li class="dropdown">
+      <a href="#">Our Projects <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-menu">
+        <a href="ongoing.html">Ongoing Projects</a>
+        <a href="completed.html">Completed Projects</a>
+      </div>
+    </li>
+
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- CONTACT HEADER -->
+<div class="contact-header">
+  <h1 class="contact-title"><span class="line">~</span> Contact Us <span class="line">~</span></h1>
+  <p>Get in touch with us today</p>
+</div>
+
+
+<!-- CONTACT FORM -->
+<div class="contact-form">
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="9e4462fd-d5ea-4f91-89d0-c0a68682d1fe">
+
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone" required>
+
+    <textarea name="message" placeholder="Comments" required></textarea>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer">
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ongoing.html">Our Projects</a></li>
+          <li><a href="completed.html">Who We Are?</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p>📍 Block-O 606 Aparna Serenity, Kompally, Hyderabad - 500064 T.S.</p>
+        <p>🌐 <a href="http://www.arkurbansinfraa.com">www.arkurbansinfraa.com</a></p>
+      </div>
+
+      <div class="footer-col">
+        <p>📞 <a href="tel:+917022830867">+91 7022830867</a></p>
+        <p>✉️ <a href="mailto:arkurbansinfraa@gmail.com">arkurbansinfraa@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- FIXED PRIVACY SECTION -->
+    <div class="privacy-bar-wrapper">
+      <div class="privacy-bar">
+        <div class="left-links">
+          <a href="privacy.html">PRIVACY POLICY</a>
+          <a href="terms.html">TERMS & CONDITION</a>
+        </div>
+
+        <div class="right-text">
+          © 2025 A R K URBANS INFRAA | ALL RIGHTS RESERVED
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- MOBILE JS -->
+<script>
+// Toggle mobile menu
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("mobile-nav-active");
+});
+
+// Mobile dropdown
+document.querySelectorAll(".dropdown > a").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    if (window.innerWidth <= 820) {
+      e.preventDefault();
+      btn.parentElement.classList.toggle("open");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ongoing Projects | A R K Urbans Infraa</title>
+
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">A R K URBANS INFRAA</div>
+      <!-- NAVBAR -->
+    <ul class="desktop-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Our Projects <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="ongoing.html">Ongoing Projects</a>
+          <a href="completed.html">Completed Projects</a>
+        </div>
+      </li>
+
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- HAMBURGER BUTTON -->
+    <div class="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+
+    <div class="mobile-dropdown">
+      <a class="mobile-dropdown-toggle">Our Projects <i class="fa fa-caret-down"></i></a>
+      <div class="mobile-dropdown-menu">
+        <a href="ongoing.html">Ongoing Projects</a>
+        <a href="completed.html">Completed Projects</a>
+      </div>
+    </div>
+
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+    <!-- HEADER SECTION -->
+  <section class="heading-section">
+    <div class="left">
+      <h1>Ongoing Projects</h1>
+    </div>
+
+    <div class="right">
+      <h2>Shaping the future, one milestone at a time.</h2>
+      <p>
+        Each ongoing project is a promise in motion—crafted with dedication, innovation, and precision. 
+        We move forward with purpose, building today what becomes tomorrow’s pride.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROJECT GRID -->
+  <section class="projects-container">
+
+    <!-- CARD 1 -->
+    <div class="project-card">
+      <img src="1.jpeg" alt="Project">
+
+      <h3>ARK Urban Mall</h3>
+      <p>C + G + 4 FLOORS | 1700 SQ YARD </p>
+      <p>Total SQ FT: 42000 SFT | Cellar: 12000 SFT</p>
+      <h4 class="location">Gundlapochmpally, Kompally Road</h4>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="project-card">
+      <img src="2.jpeg" alt="Project">
+
+      <h3>ARK Spectra</h3>
+      <p>STILT + 5 |  550 SQ YARDS</p>
+      <p>3BHK: 1650 SFT | 10 Units</p>
+      <h4 class="location">Indus School Rd,Yapral</h4>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="project-card">
+      <img src="3.jpeg" alt="Project">
+
+      <h3>ARK Springs</h3>
+      <p>STILT + 5 | 525 SQ YARDS</p>
+      <p>3BHK: 1575 SFT | 10 Units </p>
+      <h4 class="location">Indus School Rd,Yapral</h4>
+    </div>
+    <div class="project-card">
+      <img src="4.jpeg" alt="Project">
+
+      <h3>ARK Espino</h3>
+      <p> S + 5 FLOORS |  450 SQ YARDS </p>
+      <p>3BHK: 1550 SFT | 10 Units</p>
+          <h4 class="location">PadmaNagar phase-2, Suchitra Road</h4>
+    </div>
+    <div class="project-card">
+      <img src="5.jpeg" alt="Project">
+
+      <h3>ARK Project</h3>
+      <p> S + 4 FLOORS | 267 SQ YARDS</p>
+      <p>3BHK: 1920 SFT | 4 Units</p>
+      <h4 class="location">Mythri Nagar, Miyapur Road</h4>
+    </div>
+
+  </section>
+  <!-- FOOTER -->
+<footer>
+  <div class="footer">
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="ongoing.html">Our Projects</a></li>
+          <li><a href="completed.html">Who We Are?</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p>📍 Block-O 606 Aparna Serenity, Kompally, Hyderabad - 500064 T.S.</p>
+        <p>🌐 <a href="http://www.arkurbansinfraa.com">www.arkurbansinfraa.com</a></p>
+      </div>
+
+      <div class="footer-col">
+        <p>📞 <a href="tel:+917022830867">+91 7022830867</a></p>
+        <p>✉️ <a href="mailto:arkurbansinfraa@gmail.com">arkurbansinfraa@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <!-- FIXED PRIVACY SECTION -->
+    <div class="privacy-bar-wrapper">
+      <div class="privacy-bar">
+        <div class="left-links">
+          <a href="privacy.html">PRIVACY POLICY</a>
+          <a href="terms.html">TERMS & CONDITION</a>
+        </div>
+
+        <div class="right-text">
+          © 2025 A R K URBANS INFRAA | ALL RIGHTS RESERVED
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+document.querySelector(".menu-toggle").onclick = () => { 
+  document.querySelector(".mobile-menu").classList.toggle("active");
+};
+document.querySelector(".mobile-dropdown-toggle").onclick = () => {
+  document.querySelector(".mobile-dropdown-menu").classList.toggle("active");
+};
+</script>
+
+</body>
+
+</html>
