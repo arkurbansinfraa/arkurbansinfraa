@@ -269,6 +269,23 @@ footer {
 .privacy-bar a {
   color: #9ca3af;
 }
+.developer-credit {
+  text-align: center;
+  font-size: 13px;
+  padding: 12px 10px;
+  color: #ffffff;
+  background: #0b2338;
+}
+
+.developer-credit a {
+  color: #c89f45;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.developer-credit a:hover {
+  color: #d8b66a;
+}
 
 /* ============================================================= */
 /* RESPONSIVE */
