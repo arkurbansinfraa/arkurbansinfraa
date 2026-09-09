@@ -60,13 +60,13 @@ nav ul li.dropdown {
 
 .dropdown-menu {
   display: none;
-  position: absolute;
+  position: fixed;
   background: #0b2338;
-  top: 100%;
+  top: 80%;
   min-width: 200px;
   border-radius: 5px;
   border: 1px solid rgba(255,255,255,0.2);
-  z-index: 1200;
+  z-index: 9999;
 }
 
 .dropdown-menu a {
@@ -105,7 +105,7 @@ nav ul li.dropdown {
 
 .mobile-menu a {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border:none;
   color: white;
   text-decoration: none;
 }
